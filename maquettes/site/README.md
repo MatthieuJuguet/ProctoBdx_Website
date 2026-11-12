@@ -2,23 +2,24 @@
 
 Les pages du site, construites sur le [design system](../../design-system/README.md) et sur le [prototype V2](../prototype-v2/README.md).
 
-## Pages
+## Arborescence
 
-| Rubrique | Page | Contenu |
+Chaque entrée du menu mène à une page dédiée, qui ouvre la rubrique ; ses sous-pages s'atteignent depuis elle. Le menu et le pied de page ne renvoient jamais vers des ancres de l'accueil : l'accueil résume, les pages détaillent.
+
+| Rubrique (menu) | Page d'entrée | Sous-pages |
 | --- | --- | --- |
-| | `index.html` — Accueil | Reprise du prototype ; ses liens mènent aux pages ci-dessous. |
-| Consultations | `prendre-rendez-vous.html` | L'adressage et le parcours de soins, réserver (délai, Doctolib, téléphone), annuler. |
-| | `premiere-consultation.html` | Les craintes, ce qu'il faut apporter, le déroulement. |
-| | `honoraires.html` | Le secteur 2, les montants en consultation, lire un devis et son contrat. |
-| Urgences | `urgences.html` | Qui consulter, SOS Procto, accès médecins. |
-| Votre intervention | `votre-intervention.html` | Reprise du prototype. |
-| Le cabinet | `equipe-medicale.html` | L'équipe, puis le parcours de chaque médecin. |
-| | `notre-histoire.html` | Les origines, les grandes dates, l'activité. |
-| Espace médecins | `espace-medecins.html` | SOS Procto, adresser un patient, le coin de l'urgentiste, les fiches de liaison. |
-| | `coin-urgentiste.html` | Les conduites à tenir du site actuel. Mise en garde à l'arrivée, page non indexée. |
-| Pied de page | `mentions-legales.html`, `confidentialite.html` | Projets, avec les informations à compléter entre crochets. |
+| Consultations | `consultations.html` : avant de consulter (vidéos), l'adressage et le parcours de soins, prendre rendez-vous | `premiere-consultation.html`, `honoraires.html` |
+| Urgences | `urgences.html` : qui consulter, SOS Procto | — |
+| Votre intervention | `votre-intervention.html` : reprise du prototype | — |
+| Le cabinet | `equipe-medicale.html` : la photo d'équipe et une carte par médecin | une page par médecin (`dr-alain-castinel.html`, `dr-frederic-juguet.html`, `dr-cecile-laclotte-duhoux.html`, `dr-pauline-roumeguere.html`, `dr-gauthier-pellet.html`, `dr-florian-grousez.html`), `notre-histoire.html` |
+| Accès et horaires | `acces-horaires.html` : adresse, horaires, accès, la clinique Tivoli-Ducos | — |
+| Espace médecins (bouton) | `espace-medecins.html` : SOS Procto, adresser un patient, le coin de l'urgentiste | `coin-urgentiste.html` (mise en garde à l'arrivée, page non indexée) |
 
-Les seuls liens encore vides (`#`) sont ceux du prototype dans Votre intervention : site de la clinique Tivoli-Ducos, dépistage, information de la SNFCP.
+- L'accueil (`index.html`) reprend le prototype ; ses raccourcis et ses liens « → » mènent aux pages ci-dessus.
+- L'Espace médecins est réservé aux médecins. Les infirmier(e)s trouvent les fiches de liaison dans Votre intervention (Après), par le lien du panneau Votre intervention de l'accueil et par la colonne Infirmier(e)s du pied de page.
+- Pied de page : Patients, Le cabinet, Espace médecins, Infirmier(e)s ; puis `mentions-legales.html` et `confidentialite.html`, des projets avec les informations à compléter entre crochets.
+- Les noms des pages des médecins reprennent les adresses du site actuel.
+- Les seuls liens encore vides (`#`) : le site de la clinique Tivoli-Ducos (Votre intervention, Accès et horaires), et deux liens du prototype dans Votre intervention (dépistage, information de la SNFCP).
 
 ## Construction
 
@@ -33,8 +34,10 @@ Ce qui manque au design system, avec ses seuls jetons. À reporter dans le desig
 
 - règles de base : `body { margin: 0 }` et `[hidden]` prioritaire (absentes de `bundle.css`), `span.mono` insécable (un numéro de téléphone se coupait) ;
 - `.notice--urgent` : l'encadré aux couleurs de l'urgence, pour les contre-indications du coin de l'urgentiste ;
-- `.chapter__ph` (portrait dans un chapitre), `.parcours` (frise d'années), `.puces` (liste à puces) et la citation dans un chapitre ;
-- `.legal` : les pages légales, un panneau et des rubriques titrées ;
+- pied de page à cinq colonnes, pour la colonne Infirmier(e)s ;
+- page d'un médecin : `.page-hero__doc` (portrait dans l'ouverture de page), `.parcours` (frise d'années), `.pager` (médecin précédent, toute l'équipe, médecin suivant) ;
+- `.puces` (liste à puces) et la citation dans un chapitre ;
+- `.panel--texte` : un panneau de rubriques titrées en h2, pour les pages légales et le parcours d'un médecin ;
 - `.note-maquette` : une note visible sur un contenu à valider ou à fournir. Elle n'existera pas sur le site.
 
 ## Contenus
