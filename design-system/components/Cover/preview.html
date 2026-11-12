@@ -1,0 +1,60 @@
+<!-- @dsCard height=340 -->
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Cabinet de Proctologie de Bordeaux</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--page); color: var(--ink); overflow: hidden; }
+  .cover { position: relative; width: 960px; height: 340px; overflow: hidden; background: var(--page); }
+  .band { position: absolute; inset: 0 0 auto; height: 112px; }
+  .band svg { display: block; width: 960px; height: 112px; }
+  .navy { fill: var(--navy); }
+  .brand { fill: var(--brand); }
+  .tint { fill: var(--clover-2); }
+  .alert { fill: var(--urgent); }
+  .c1 { fill: var(--clover-1); } .c2 { fill: var(--clover-2); } .c3 { fill: var(--clover-3); }
+  .blk { rx: var(--radius-panel); }
+  .pill { rx: 8px; }
+  .words { position: absolute; left: var(--space-10); right: var(--space-10); bottom: var(--space-7); }
+  .name { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 64px; line-height: .95; letter-spacing: -.02em; color: var(--ink); }
+  .name em { font-style: italic; color: var(--navy); }
+  .tag { margin: var(--space-3) 0 0 2px; font-family: var(--font-text); font-size: 14px; line-height: 20px; color: var(--ink2); max-width: 440px; }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="band" aria-hidden="true">
+<svg viewBox="0 0 960 112" width="960" height="112">
+<!--
+  blocks      navy 392 wide (panneau Votre intervention, pied de page : le bloc le plus lourd) · brand 216 wide (bleu d'action) · clover-2 120 wide (le trèfle, en relief) · urgent 32×16 une seule fois (état, gardé petit) ; bande de 112 px, un tiers de 960×340, saignant par le haut
+  arrangement une bande de blocs inégaux en haut, comme les bandeaux d'avant-plan qui passent devant la page ; coins radius-panel, gouttières space-4
+  pattern     le trèfle en feuillets : quatre feuilles en pilules inclinées comme le logo, chacune en trois plaques concentriques clover-1, clover-2, clover-3, comme les plaques du trèfle 3D d'arrière-plan
+  scales      gouttières space-4 (16 px) ; blocs radius-panel ; plaques de 80, 65 et 50 px de long (le trèfle saigne par le haut et la droite), arrondi à la moitié de leur épaisseur (pilules) ; feuilles écartées du centre de space-1
+-->
+<rect class="navy blk" x="-28" y="-28" width="420" height="140"/>
+<rect class="brand blk" x="408" y="-28" width="216" height="140"/>
+<rect class="tint blk" x="640" y="-28" width="120" height="140"/>
+<rect class="alert pill" x="776" y="96" width="32" height="16"/>
+<rect class="c1" x="894.0" y="26.0" width="80" height="48" rx="24" transform="rotate(-58 888 50)"/>
+<rect class="c2" x="901.5" y="32.0" width="65" height="36" rx="18" transform="rotate(-58 888 50)"/>
+<rect class="c3" x="909.0" y="38.0" width="50" height="24" rx="12" transform="rotate(-58 888 50)"/>
+<rect class="c1" x="894.0" y="26.0" width="80" height="48" rx="24" transform="rotate(32 888 50)"/>
+<rect class="c2" x="901.5" y="32.0" width="65" height="36" rx="18" transform="rotate(32 888 50)"/>
+<rect class="c3" x="909.0" y="38.0" width="50" height="24" rx="12" transform="rotate(32 888 50)"/>
+<rect class="c1" x="894.0" y="26.0" width="80" height="48" rx="24" transform="rotate(122 888 50)"/>
+<rect class="c2" x="901.5" y="32.0" width="65" height="36" rx="18" transform="rotate(122 888 50)"/>
+<rect class="c3" x="909.0" y="38.0" width="50" height="24" rx="12" transform="rotate(122 888 50)"/>
+<rect class="c1" x="894.0" y="26.0" width="80" height="48" rx="24" transform="rotate(212 888 50)"/>
+<rect class="c2" x="901.5" y="32.0" width="65" height="36" rx="18" transform="rotate(212 888 50)"/>
+<rect class="c3" x="909.0" y="38.0" width="50" height="24" rx="12" transform="rotate(212 888 50)"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Cabinet de Proctologie<br><em>de Bordeaux</em></h1>
+<p class="tag">Orienter avant de réserver : le site d'un cabinet qui reçoit les patients adressés par leur médecin.</p>
+</div>
+</div>
+</body>
+</html>

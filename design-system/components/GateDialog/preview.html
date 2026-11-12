@@ -1,0 +1,24 @@
+<!-- @dsCard group="Contenus" height=560 width=960 -->
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><title>GateDialog</title>
+<style>
+body{margin:0}
+.scrim{min-height:560px;display:grid;place-items:center;background:var(--scrim)}
+.gate{position:static;margin:0}
+</style>
+</head>
+<body>
+<div class="scrim">
+<dialog class="gate" open aria-labelledby="g-t">
+  <div class="gate__in">
+    <span class="gate__ic" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+    <p class="eyebrow">Espace médecins</p>
+    <h2 id="g-t">Le coin de l'urgentiste</h2>
+    <div id="gate-texte"><p><strong>Cette rubrique s'adresse aux médecins.</strong> Elle détaille des conduites à tenir, des traitements et leurs posologies, rédigés pour des professionnels de santé.</p><p>Vous êtes patient ? Ces informations ne remplacent pas un examen médical. Ne vous traitez pas à partir de cette page : consultez votre médecin.</p></div>
+    <div class="gate__actions"><a class="btn btn--primary" href="#">Je suis professionnel de santé</a><button class="btn btn--line" type="button">Revenir au site</button></div>
+  </div>
+</dialog>
+</div>
+</body>
+</html>
