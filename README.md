@@ -16,7 +16,7 @@ maquettes/       Maquettes HTML/CSS des pages du site, dont le prototype de dép
 scripts/         Outils : import du design system, génération de tokens.css, serveur local
 ```
 
-Pour afficher les maquettes : `node scripts/serve.mjs`, puis http://localhost:4317/maquettes/prototype-v2/
+Pour afficher les maquettes : `node scripts/serve.mjs`, puis http://localhost:4317/maquettes/site/
 
 ## Design system
 

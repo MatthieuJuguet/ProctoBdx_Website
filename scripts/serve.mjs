@@ -25,5 +25,5 @@ createServer((req, res) => {
   res.writeHead(200, { 'content-type': types[extname(file).toLowerCase()] ?? 'application/octet-stream', 'cache-control': 'no-store' });
   createReadStream(file).pipe(res);
 }).listen(port, '127.0.0.1', () => {
-  console.log(`Prototype V2 : http://localhost:${port}/maquettes/prototype-v2/`);
+  console.log(`Maquettes : http://localhost:${port}/maquettes/site/`);
 });

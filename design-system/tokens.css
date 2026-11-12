@@ -147,7 +147,7 @@
   --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, Menlo, Consolas, monospace;
 }
 
-.display-hero {
+.type-display-hero {
   font-family: var(--font-display);
   font-size: 60px;
   line-height: 1.03;
@@ -155,7 +155,7 @@
   letter-spacing: -0.02em;
 }
 
-.display-page {
+.type-display-page {
   font-family: var(--font-display);
   font-size: 56px;
   line-height: 1.04;
@@ -163,7 +163,7 @@
   letter-spacing: -0.02em;
 }
 
-.title-1 {
+.type-title-1 {
   font-family: var(--font-display);
   font-size: 46px;
   line-height: 1.05;
@@ -171,14 +171,14 @@
   letter-spacing: -0.015em;
 }
 
-.title-2 {
+.type-title-2 {
   font-family: var(--font-display);
   font-size: 38px;
   line-height: 1.1;
   font-weight: 400;
 }
 
-.statement {
+.type-statement {
   font-family: var(--font-display);
   font-size: 34px;
   line-height: 1.18;
@@ -186,35 +186,35 @@
   letter-spacing: -0.012em;
 }
 
-.title-3 {
+.type-title-3 {
   font-family: var(--font-display);
   font-size: 30px;
   line-height: 1.15;
   font-weight: 500;
 }
 
-.title-4 {
+.type-title-4 {
   font-family: var(--font-display);
   font-size: 26px;
   line-height: 1.15;
   font-weight: 500;
 }
 
-.title-5 {
+.type-title-5 {
   font-family: var(--font-display);
   font-size: 23px;
   line-height: 1.15;
   font-weight: 500;
 }
 
-.brand-name {
+.type-brand-name {
   font-family: var(--font-display);
   font-size: 20px;
   line-height: 1.15;
   font-weight: 500;
 }
 
-.quote {
+.type-quote {
   font-family: var(--font-display);
   font-size: 22px;
   line-height: 1.4;
@@ -222,14 +222,14 @@
   font-style: italic;
 }
 
-.key-value {
+.type-key-value {
   font-family: var(--font-display);
   font-size: 22px;
   line-height: 1.2;
   font-weight: 400;
 }
 
-.numeral-chapter {
+.type-numeral-chapter {
   font-family: var(--font-display);
   font-size: 76px;
   line-height: 0.9;
@@ -237,7 +237,7 @@
   font-style: italic;
 }
 
-.numeral-step {
+.type-numeral-step {
   font-family: var(--font-display);
   font-size: 68px;
   line-height: 1;
@@ -245,7 +245,7 @@
   font-style: italic;
 }
 
-.numeral-figure {
+.type-numeral-figure {
   font-family: var(--font-display);
   font-size: 56px;
   line-height: 1;
@@ -253,7 +253,7 @@
   letter-spacing: -0.02em;
 }
 
-.numeral-toc {
+.type-numeral-toc {
   font-family: var(--font-display);
   font-size: 30px;
   line-height: 1;
@@ -261,42 +261,42 @@
   font-style: italic;
 }
 
-.lead {
+.type-lead {
   font-family: var(--font-text);
   font-size: 19px;
   line-height: 1.55;
   font-weight: 400;
 }
 
-.body {
+.type-body {
   font-family: var(--font-text);
   font-size: 18px;
   line-height: 1.55;
   font-weight: 400;
 }
 
-.body-s {
+.type-body-s {
   font-family: var(--font-text);
   font-size: 17px;
   line-height: 1.55;
   font-weight: 400;
 }
 
-.small {
+.type-small {
   font-family: var(--font-text);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 }
 
-.caption {
+.type-caption {
   font-family: var(--font-text);
   font-size: 15px;
   line-height: 1.45;
   font-weight: 400;
 }
 
-.eyebrow {
+.type-eyebrow {
   font-family: var(--font-text);
   font-size: 14px;
   line-height: 1.3;
@@ -304,7 +304,7 @@
   letter-spacing: 0.05em;
 }
 
-.label {
+.type-label {
   font-family: var(--font-text);
   font-size: 13px;
   line-height: 1.3;
@@ -312,35 +312,35 @@
   letter-spacing: 0.05em;
 }
 
-.button {
+.type-button {
   font-family: var(--font-text);
   font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
 }
 
-.nav {
+.type-nav {
   font-family: var(--font-text);
   font-size: 15.5px;
   line-height: 1.2;
   font-weight: 600;
 }
 
-.item {
+.type-item {
   font-family: var(--font-text);
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
 
-.mono {
+.type-mono {
   font-family: var(--font-mono);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 700;
 }
 
-.mono-s {
+.type-mono-s {
   font-family: var(--font-mono);
   font-size: 14px;
   line-height: 1.2;

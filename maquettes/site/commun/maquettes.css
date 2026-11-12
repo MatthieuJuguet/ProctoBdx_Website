@@ -1,0 +1,114 @@
+/* Compléments des maquettes, chargés après tokens.css et bundle.css.
+   Uniquement des jetons du design system. Ce qui sera retenu ira dans le design system ;
+   le reste disparaîtra avec les maquettes. */
+
+/* Deux règles de base du prototype V2 absentes de bundle.css (à reporter dans le design system) :
+   - la marge par défaut du body (8 px) décalait toute la page ;
+   - l'attribut hidden doit l'emporter, sinon un composant en display:flex ou grid reste visible. */
+body { margin: 0; }
+[hidden] { display: none !important; }
+
+/* Une donnée en ligne (téléphone, heure) ne se coupe pas en fin de ligne :
+   « 05 56 44 84 93 » se coupait dans une carte étroite. À reporter dans le design system. */
+span.mono { white-space: nowrap; }
+
+/* Note de maquette : contenu à valider ou à fournir. N'existera pas sur le site. */
+.note-maquette {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-ring) dashed var(--closed);
+  border-radius: var(--radius-m);
+  background: var(--closed-soft);
+  color: var(--important-ink);
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 62ch;
+}
+.note-maquette::before {
+  content: "Maquette";
+  flex: none;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--closed);
+  color: var(--surface);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Chapitre d'un médecin : le portrait remplace le numéro du chapitre. */
+.chapter__ph {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  background: var(--photo-empty);
+}
+.chapter__ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.chapter__side .since { color: var(--brand); font-weight: 700; }
+@media (max-width: 1100px) {
+  .chapter__ph { width: 112px; height: 112px; }
+}
+
+/* Parcours : une frise d'années, du plus ancien au plus récent. */
+.parcours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: var(--border-control) solid var(--brand-line);
+}
+.parcours li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-2) 0 var(--space-2) var(--space-6);
+}
+.parcours li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 17px;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-round);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 var(--border-control) var(--brand);
+}
+.parcours .an {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.parcours p { margin: 0; color: var(--ink2); }
+@media (max-width: 900px) {
+  .parcours li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
+/* Encadré d'alerte (Le coin de l'urgentiste) : la Notice aux couleurs de l'urgence, comme le bandeau Urgences.
+   Le titre et l'icône d'alerte disent l'alerte : la couleur ne fait que la doubler. */
+.notice--urgent { background: var(--urgent-soft); border-color: var(--urgent-line); }
+.notice--urgent .notice__ic { color: var(--urgent); box-shadow: inset 0 0 0 var(--border-ring) var(--urgent-line); }
+.notice--urgent p { color: var(--urgent-ink); }
+
+/* Citation dans un chapitre : style typographique quote (.type-quote), en navy comme dans le prototype. */
+.chapter__body blockquote { margin: 0; color: var(--navy); max-width: 62ch; }
+
+/* Pages légales : un seul panneau, des rubriques .sub titrées en h2 (même style que .sub h3). */
+.legal { display: flex; flex-direction: column; gap: var(--space-4); }
+.legal .legal__h { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.15; }
+.legal .sub > p { max-width: 70ch; color: var(--ink2); }
+
+/* Liste à puces simple dans un chapitre (engagements, appartenances). */
+.puces { margin: 0; padding-left: 1.2em; color: var(--ink2); display: grid; gap: var(--space-2); max-width: 62ch; }
+.puces li::marker { color: var(--brand); }

@@ -2,6 +2,9 @@
 // Même compilation que la page du design system : couleurs et ombres par thème,
 // autres familles de jetons dans :root, une classe par style typographique,
 // un @font-face par police.
+// Une différence : les classes des styles typographiques sont préfixées (.type-eyebrow, .type-nav…).
+// Sans préfixe, .lead, .eyebrow, .nav et .mono entrent en collision avec les classes des composants
+// de bundle.css et changent leur rendu (interlignes, hauteur des liens du menu, taille des données).
 // Usage : node scripts/tokens-css.mjs
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -61,7 +64,7 @@ for (const g of t.type?.groups ?? []) {
     if (s.fontStyle) decl.push(`  font-style: ${s.fontStyle};`);
     if (s.letterSpacing !== undefined) decl.push(`  letter-spacing: ${px(s.letterSpacing)};`);
     if (s.opticalSize !== undefined) decl.push(`  font-variation-settings: 'opsz' ${s.opticalSize};`);
-    out.push(`.${name(s.name)} {`, ...decl, '}', '');
+    out.push(`.type-${name(s.name)} {`, ...decl, '}', '');
   }
 }
 
