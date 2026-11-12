@@ -70,26 +70,30 @@
 </script>
 
 <main>
-<section class="page-hero">
+<section class="page-hero urgence page-hero--band front" aria-labelledby="urgences-titre">
   <div class="wrap">
     <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Urgences</span></nav>
-    <div class="page-hero__text">
-      <p class="eyebrow">Urgences</p>
-      <h1>En cas d'urgence, <em>parlez-en d'abord à un médecin.</em></h1>
-      <p class="lead">La notion d'urgence n'est pas la même pour le patient, pour le médecin de premier recours et pour le chirurgien proctologue. C'est un médecin qui, après vous avoir examiné, juge du caractère urgent de votre situation.</p>
+    <div class="urgence__in">
+      <div class="urgence__head">
+        <span class="urgence__ic" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <p class="eyebrow">Urgences</p>
+        <h1 id="urgences-titre">En cas d'urgence, <em>parlez-en d'abord à un médecin.</em></h1>
+      </div>
+      <div class="urgence__body">
+        <p>La notion d'urgence n'est pas la même pour le patient, pour le médecin de premier recours et pour le chirurgien proctologue.</p>
+        <ol>
+          <li><span>Consultez votre médecin traitant ou, à défaut, un médecin urgentiste : c'est lui qui juge du caractère urgent de votre situation.</span></li>
+          <li><span>S'il a besoin d'un avis spécialisé, il contacte directement le proctologue d'astreinte par le service téléphonique SOS Procto, après vous avoir examiné.</span></li>
+        </ol>
+        <a href="#sos-procto">Comment votre médecin nous joint →</a>
+      </div>
     </div>
-    <nav class="toc" aria-label="Sur cette page">
-      <a class="glass" href="#qui-consulter"><span class="toc__n">01</span><span>Qui consulter<small>Votre médecin, en premier</small></span></a>
-      <a class="glass" href="#sos-procto"><span class="toc__n">02</span><span>SOS Procto<small>Comment votre médecin nous joint</small></span></a>
-      <a class="glass" href="#medecins"><span class="toc__n">+</span><span>Vous êtes médecin<small>Avis, messagerie, conduites à tenir</small></span></a>
-    </nav>
   </div>
 </section>
 
 <div class="wrap stack stack--doc">
   <section class="panel glass chapter" id="qui-consulter" aria-labelledby="qui-titre">
     <header class="chapter__side">
-      <span class="chapter__n" aria-hidden="true">01</span>
       <p class="eyebrow">Qui consulter</p>
       <h2 id="qui-titre">Votre médecin traitant, en premier</h2>
     </header>
@@ -114,7 +118,6 @@
 
   <section class="panel glass chapter" id="sos-procto" aria-labelledby="sos-titre">
     <header class="chapter__side">
-      <span class="chapter__n" aria-hidden="true">02</span>
       <p class="eyebrow">SOS Procto</p>
       <h2 id="sos-titre">Comment votre médecin nous joint</h2>
     </header>

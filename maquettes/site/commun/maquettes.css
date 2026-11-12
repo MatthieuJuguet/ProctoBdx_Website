@@ -144,3 +144,76 @@ span.mono { white-space: nowrap; }
 /* Liste à puces simple dans un chapitre (engagements, appartenances). */
 .puces { margin: 0; padding-left: 1.2em; color: var(--ink2); display: grid; gap: var(--space-2); max-width: 62ch; }
 .puces li::marker { color: var(--brand); }
+
+/* ====================================================================================
+   Ouvertures de rubrique : chaque page d'entrée s'ouvre sur ce qui caractérise sa rubrique,
+   avec des composants et des couleurs que le design system associe déjà à ces sujets.
+   ==================================================================================== */
+
+/* Pictogramme de rubrique devant le sur-titre (sur toutes les pages d'une rubrique). */
+.eyebrow--ic { display: inline-flex; align-items: center; gap: var(--space-2); }
+.eyebrow--ic .icon { width: 20px; height: 20px; flex: none; }
+.eyebrow--ic .logo { width: 20px; height: 21px; flex: none; }
+
+/* Sommaire sans numéros : hors séquence, une flèche remplace le numéro. */
+.toc__n--ic { display: grid; place-items: center; }
+.toc__n--ic .icon { width: 22px; height: 22px; }
+
+/* Bandeaux d'ouverture pleine largeur (Urgences, Votre intervention) : opaques, en avant-plan,
+   le trèfle passe dessous. La pile de panneaux qui suit reprend son écart normal. */
+.page-hero--band + .stack--doc { padding-top: var(--space-20); }
+@media (max-width: 900px) { .page-hero--band + .stack--doc { padding-top: var(--space-10); } }
+
+/* Urgences : le bandeau Urgences de l'accueil devient l'ouverture de la page. */
+.page-hero.urgence { padding-block: 40px 0; }
+.page-hero.urgence .crumbs { margin-bottom: 0; }
+.page-hero.urgence .urgence__in { padding-block: 32px 64px; }
+.page-hero.urgence h1 em { color: var(--urgent); }
+@media (max-width: 900px) { .page-hero.urgence .urgence__in { padding-block: 24px 44px; } }
+
+/* Votre intervention : le marine du panneau « Votre intervention » de l'accueil. */
+.page-hero--navy { background: var(--panel-navy); color: var(--on-navy); padding-block: 40px 64px; }
+.page-hero--navy .crumbs, .page-hero--navy .crumbs a { color: var(--on-navy2); }
+.page-hero--navy .eyebrow { color: var(--num); }
+.page-hero--navy h1 { color: var(--surface); }
+.page-hero--navy h1 em { color: var(--num); }
+.page-hero--navy .lead { color: var(--on-navy2); }
+.page-hero--navy .toc a.glass {
+  background: transparent;
+  border: var(--border-hair) solid var(--on-navy-line);
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  color: var(--surface);
+}
+.page-hero--navy .toc a.glass:hover { border-color: var(--num); color: var(--surface); }
+.page-hero--navy .toc small { color: var(--on-navy2); }
+.page-hero--navy .toc__n { color: var(--num); }
+.page-hero--navy :focus-visible { outline-color: var(--num); }
+
+/* Consultations : le parcours de soins, directement dans l'ouverture. */
+.page-hero__path { margin-top: var(--space-10); max-width: 1180px; }
+
+/* Le cabinet : la photo de l'équipe en grand, dès l'arrivée. */
+.page-hero__equipe {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-10);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Accès et horaires : l'adresse en titre, à côté de la façade. */
+.page-hero__lieu { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-14); align-items: center; }
+.page-hero__lieu .page-hero__text { gap: var(--space-5); }
+.page-hero__tel { color: var(--ink-clover); }
+.page-hero__tel .mono { color: var(--ink); font-weight: 700; }
+.page-hero__photo { margin: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.page-hero__photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-xl); box-shadow: var(--shadow-card); }
+.page-hero__photo figcaption { font-size: 15px; color: var(--ink-clover); }
+@media (max-width: 1100px) { .page-hero__lieu { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); } }
+
+/* Horaires et accès, sortis du bloc Venir au cabinet. */
+.visit-panel .visit__cols { border-top: 0; padding-top: 0; }
+.visit-panel h3 { font-size: 14px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink2); margin-bottom: 10px; }

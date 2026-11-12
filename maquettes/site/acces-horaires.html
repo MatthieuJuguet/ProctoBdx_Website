@@ -73,38 +73,33 @@
 <section class="page-hero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Accès et horaires</span></nav>
-    <div class="page-hero__text">
-      <p class="eyebrow">Accès et horaires</p>
-      <h1>Venir au cabinet, <em>au Bouscat.</em></h1>
-      <p class="lead">Les consultations ont lieu au 159 boulevard Godard, au Bouscat, du lundi au vendredi. Les interventions, elles, ont lieu à la clinique Tivoli-Ducos, à Bordeaux.</p>
-    </div>
-    <nav class="toc" aria-label="Sur cette page">
-      <a class="glass" href="#cabinet"><span class="toc__n">01</span><span>Le cabinet<small>Adresse, horaires, accès</small></span></a>
-      <a class="glass" href="#clinique"><span class="toc__n">02</span><span>La clinique Tivoli-Ducos<small>Pour une intervention</small></span></a>
-    </nav>
-  </div>
-</section>
-
-<div class="wrap stack stack--doc">
-  <section class="panel glass" id="cabinet" aria-labelledby="cabinet-titre">
-    <div class="panel__head">
-      <div class="head">
-        <p class="eyebrow">Les consultations</p>
-        <h2 class="h2" id="cabinet-titre">Au Bouscat, accessible en bus et en tram</h2>
-      </div>
-      <p>Le cabinet est ouvert du lundi au vendredi, de 9h00 à 12h30 et de 14h00 à 18h30.</p>
-    </div>
-    <div class="visit">
-      <figure><img src="../../design-system/assets/Photos/facade.jpg" alt="Entrée du cabinet : façade blanche et porte vitrée" width="748" height="434" loading="lazy"><figcaption>L'entrée du cabinet, 159 boulevard Godard.</figcaption></figure>
-      <div class="visit__info">
-        <p class="addr">159 boulevard Godard<br>33110 Le Bouscat</p>
+    <div class="page-hero__lieu">
+      <div class="page-hero__text">
+        <p class="eyebrow eyebrow--ic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Accès et horaires</p>
+        <h1>159 boulevard Godard, <em>33110 Le Bouscat.</em></h1>
+        <p class="lead">Les consultations ont lieu au cabinet, du lundi au vendredi, de 9h00 à 12h30 et de 14h00 à 18h30.</p>
         <div class="actions"><span class="status is-open js-status">Ouvert maintenant · jusqu'à 18h30</span></div>
-        <p class="visit__tel">Téléphone : <span class="mono">05 56 44 84 93</span></p>
+        <p class="page-hero__tel">Téléphone : <span class="mono">05 56 44 84 93</span>. Attention, le standard est souvent saturé.</p>
         <div class="actions">
           <a class="btn btn--primary" href="https://www.openstreetmap.org/search?query=159%20boulevard%20Godard%2033110%20Le%20Bouscat"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
           <button class="btn btn--line" type="button" id="copier">Copier l'adresse</button>
         </div>
-        <div class="visit__cols">
+      </div>
+      <figure class="page-hero__photo"><img src="../../design-system/assets/Photos/facade.jpg" alt="Entrée du cabinet : façade blanche et porte vitrée" width="748" height="434"><figcaption>L'entrée du cabinet, 159 boulevard Godard.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap stack stack--doc">
+  <section class="panel glass visit-panel" id="cabinet" aria-labelledby="cabinet-titre">
+    <div class="panel__head">
+      <div class="head">
+        <p class="eyebrow">Venir au cabinet</p>
+        <h2 class="h2" id="cabinet-titre">Horaires et accès</h2>
+      </div>
+      <p>Au Bouscat, accessible en bus et en tram. La ligne du jour est mise en avant dans les horaires.</p>
+    </div>
+    <div class="visit__cols">
           <div><h3>Horaires</h3><div class="hours" id="horaires"></div></div>
           <div><h3>Accès</h3><ul class="access">
             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16M8 21v-4M16 21v-4"/></svg><span>Bus 9, arrêt « Ampère »</span></li>
@@ -112,8 +107,6 @@
             <li class="is-warn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 16V8h3.5a2.5 2.5 0 0 1 0 5H9M5.6 5.6l12.8 12.8"/></svg><span>Pas de parking à proximité : privilégiez les deux-roues ou les transports en commun.</span></li>
           </ul></div>
         </div>
-      </div>
-    </div>
   </section>
 
   <section class="panel glass" id="clinique" aria-labelledby="clinique-titre">

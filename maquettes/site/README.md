@@ -16,6 +16,21 @@ Chaque entrée du menu mène à une page dédiée, qui ouvre la rubrique ; ses s
 | Espace médecins (bouton) | `espace-medecins.html` : SOS Procto, adresser un patient, le coin de l'urgentiste | `coin-urgentiste.html` (mise en garde à l'arrivée, page non indexée) |
 
 - L'accueil (`index.html`) reprend le prototype ; ses raccourcis et ses liens « → » mènent aux pages ci-dessus.
+
+## Reconnaître la page où l'on est
+
+Chaque page d'entrée de rubrique s'ouvre sur ce qui la caractérise, avec des composants et des couleurs que le design system associe déjà à son sujet :
+
+| Rubrique | Ouverture |
+| --- | --- |
+| Consultations | Le parcours de soins en trois étapes, dans l'ouverture. |
+| Urgences | Le bandeau Urgences de l'accueil, rose pâle sur toute la largeur, avec ses deux étapes. |
+| Votre intervention | Un bandeau marine, la couleur du panneau « Votre intervention » de l'accueil. |
+| Le cabinet | La photo de l'équipe en grand format. |
+| Accès et horaires | L'adresse en titre, le statut d'ouverture, l'itinéraire, à côté de la façade. |
+
+- Un pictogramme de rubrique précède le sur-titre de toutes les pages d'une rubrique (calendrier, intervention, trèfle du cabinet, lieu, cadenas de l'Espace médecins) ; sur les Urgences, c'est la pastille d'alerte du bandeau.
+- La numérotation est réservée aux vraies séquences : les chapitres Avant, Pendant, Après de Votre intervention, le parcours de soins, les étapes de lecture d'un devis. Ailleurs, les chapitres n'ont pas de numéro et le sommaire montre une flèche.
 - L'Espace médecins est réservé aux médecins. Les infirmier(e)s trouvent les fiches de liaison dans Votre intervention (Après), par le lien du panneau Votre intervention de l'accueil et par la colonne Infirmier(e)s du pied de page.
 - Pied de page : Patients, Le cabinet, Espace médecins, Infirmier(e)s ; puis `mentions-legales.html` et `confidentialite.html`, des projets avec les informations à compléter entre crochets.
 - Les noms des pages des médecins reprennent les adresses du site actuel.
@@ -34,6 +49,7 @@ Ce qui manque au design system, avec ses seuls jetons. À reporter dans le desig
 
 - règles de base : `body { margin: 0 }` et `[hidden]` prioritaire (absentes de `bundle.css`), `span.mono` insécable (un numéro de téléphone se coupait) ;
 - `.notice--urgent` : l'encadré aux couleurs de l'urgence, pour les contre-indications du coin de l'urgentiste ;
+- ouvertures de rubrique : `.page-hero.urgence`, `.page-hero--navy`, `.page-hero__path`, `.page-hero__equipe`, `.page-hero__lieu` ; pictogramme de rubrique `.eyebrow--ic` ; sommaire sans numéros `.toc__n--ic` ;
 - pied de page à cinq colonnes, pour la colonne Infirmier(e)s ;
 - page d'un médecin : `.page-hero__doc` (portrait dans l'ouverture de page), `.parcours` (frise d'années), `.pager` (médecin précédent, toute l'équipe, médecin suivant) ;
 - `.puces` (liste à puces) et la citation dans un chapitre ;
